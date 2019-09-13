@@ -81,11 +81,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hht-gb-XrK">
-                                <rect key="frame" x="130" y="179" width="191" height="31"/>
+                            <slider autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.14999999999999999" minValue="0.10000000000000001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hht-gb-XrK">
+                                <rect key="frame" x="130" y="179" width="192" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="0gA-zK-naX"/>
+                                </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ0-TR-Ixe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ0-TR-Ixe">
                                 <rect key="frame" x="327" y="184" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -98,15 +103,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2YY-eq-jlj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="55z-cU-xuW"/>
-                            <constraint firstItem="Hht-gb-XrK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="Amy-5N-Q55"/>
                             <constraint firstItem="oZZ-b3-YKC" firstAttribute="leading" secondItem="REA-sQ-jDZ" secondAttribute="trailing" constant="12" id="BEc-3l-PuZ"/>
                             <constraint firstItem="cEZ-we-mUv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="258" id="ByI-UM-dbO"/>
                             <constraint firstItem="q2y-hK-OxQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="HVU-eg-LAO"/>
                             <constraint firstItem="Q12-rg-Pcf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="Kuc-9h-4YF"/>
                             <constraint firstItem="Drw-uI-2uo" firstAttribute="leading" secondItem="yi9-ea-RXq" secondAttribute="trailing" constant="30" id="PRj-W7-i7L"/>
-                            <constraint firstItem="ZZ0-TR-Ixe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="164" id="QKz-HG-Bs8"/>
-                            <constraint firstItem="Hht-gb-XrK" firstAttribute="leading" secondItem="Q12-rg-Pcf" secondAttribute="trailing" constant="19" id="R9z-Ne-Tlc"/>
-                            <constraint firstItem="ZZ0-TR-Ixe" firstAttribute="leading" secondItem="Hht-gb-XrK" secondAttribute="trailing" constant="8" id="Sa0-cc-lzb"/>
                             <constraint firstItem="REA-sQ-jDZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="SeZ-yQ-Ndw"/>
                             <constraint firstItem="6Cl-wv-Dlk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="258" id="ZVT-aL-LIH"/>
                             <constraint firstItem="KJq-lQ-HD0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="345" id="ZnW-d4-3FE"/>
@@ -122,13 +123,14 @@
                         <outlet property="billTotal" destination="oZZ-b3-YKC" id="Pq0-hs-Fkx"/>
                         <outlet property="billValue" destination="2YY-eq-jlj" id="LoU-VU-UAe"/>
                         <outlet property="customValue" destination="Hht-gb-XrK" id="u0w-8l-KLN"/>
+                        <outlet property="customValueTextField" destination="ZZ0-TR-Ixe" id="ymi-53-CZm"/>
                         <outlet property="tipSegmentValue" destination="Drw-uI-2uo" id="dYk-gf-owa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="5uy-rF-Bjc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+            <point key="canvasLocation" x="137.68115942028987" y="126.35869565217392"/>
         </scene>
     </scenes>
 </document>

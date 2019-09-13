@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var customValue: UISlider!
     
-  
+    @IBOutlet weak var customValueTextField: UILabel!
+    
     @IBOutlet weak var billTotal: UILabel!
     
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
         
         let bill = Double(billValue.text!)
         
+        
         if ((bill == nil) || (bill! <= 0)) {
             print("Error Handler- Bill total is NIL or NEGATIVE")
             
@@ -46,20 +48,37 @@ class ViewController: UIViewController {
         }//end of if
         
         else {
+
             //now calculate the tip based on segment chosen
             if (self.tipSegmentValue.selectedSegmentIndex == 0 ) {
                 //tip is 10%
                 let tipPerc = 0.10
+                self.billTotal.text = String(((tipPerc * bill!) + bill! ))
+                print("Tip% is \(10)")
                 
-                
-            } else if (self.tipSegmentValue.selectedSegmentIndex == 1) {
+            }
+            
+            else if (self.tipSegmentValue.selectedSegmentIndex == 1) {
                  let tipPerc = 0.15
-                
-            } else if (self.tipSegmentValue.selectedSegmentIndex == 2 ) {
+                self.billTotal.text = String(((tipPerc * bill!) + bill! ))
+
+                 print("Tip% is \(15)")
+            }
+            
+            else if (self.tipSegmentValue.selectedSegmentIndex == 2 ) {
                  let tipPerc = 0.18
+                self.billTotal.text = String(((tipPerc * bill!) + bill!))
+
+                 print("Tip% is \(18)")
+            }
+            
+            else if (self.tipSegmentValue.selectedSegmentIndex == 3) {
+                //self.billTotal.text = String((tipPerc * bill!))
                 
-            } else if (self.tipSegmentValue.selectedSegmentIndex == 3) {
+                self.customValueTextField.text = String(customValue!.value)
                 
+                
+        
             }
             
             
@@ -67,7 +86,20 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        self.customValueTextField.text = String(customValue!.value)
+
+    }
+    /*
+        let currentValue = Int(sender.value)
+        
+        self.customValueTextField.text = "\(currentValue)"
+    
+    */
   
+   
     /*
     @IBAction func billTotalValueChanged(_ sender: UITextField) {
         //Check that bill total is positive & not nil
