@@ -75,10 +75,7 @@ class ViewController: UIViewController {
             else if (self.tipSegmentValue.selectedSegmentIndex == 3) {
                 //self.billTotal.text = String((tipPerc * bill!))
                 
-                self.customValueTextField.text = String(customValue!.value)
-                
-                
-        
+                self.customValueTextField.text = String((customValue!.value * 100).rounded())
             }
             
             
