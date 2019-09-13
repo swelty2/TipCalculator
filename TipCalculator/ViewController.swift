@@ -75,7 +75,7 @@ class ViewController: UIViewController {
             else if (self.tipSegmentValue.selectedSegmentIndex == 3) {
                 //self.billTotal.text = String((tipPerc * bill!))
                 
-                self.customValueTextField.text = String((customValue!.value * 100).rounded())
+                self.customValueTextField.text = String((customValue!.value * 100))
             }
             
             
@@ -86,8 +86,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func sliderChanged(_ sender: UISlider) {
-        self.customValueTextField.text = String(customValue!.value)
+        
+        self.customValueTextField.text = String(Int((customValue!.value * 100)) ) + " %"
+    
 
+        
     }
     /*
         let currentValue = Int(sender.value)
